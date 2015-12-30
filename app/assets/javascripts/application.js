@@ -11,6 +11,8 @@
 // about supported directives.
 //
 //= require jquery
+//= require pace.js
+//= require materialize.js
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
