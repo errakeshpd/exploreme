@@ -1,0 +1,52 @@
+.container
+  .row
+    %p.flow-text.animate_text_notify
+      Welcome to Explore.me, the easiest way to explore yourself. It only takes a minute or two.
+
+  .form_panel.card-panel 
+    %h2 Register your Profile
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = devise_error_messages!
+      .row
+        .input-field.col.s6
+          %i.material-icons.prefix language
+          = f.text_field :subdomain, class: "validate", autofocus: true, required: true
+          %label{:for => "user_subdomain"} Choose subdomain (without space)
+        .col.s6
+          %b Example: 
+          Choose subdomain as "maria"
+          %br
+          You will get a profile page 
+          %b http://maria.site.com
+      .row
+        .input-field.col.s6
+          %i.material-icons.prefix account_circle
+          = f.text_field :first_name, class: "validate", autofocus: true, required: true
+          %label{:for => "icon_prefix"} First Name
+        .input-field.col.s6
+          %i.material-icons.prefix perm_identity
+          = f.text_field :last_name, class: "validate", required: true
+          %label{:for => "user_last_name"} Last Name
+      .row
+        .input-field.col.s12
+          %i.material-icons.prefix email
+          = f.email_field :email, class: "validate", required: true
+          %label{:for => "user_email"} Email
+      .row
+        .input-field.col.s6
+          %i.material-icons.prefix vpn_key
+          = f.password_field :password, autocomplete: "off", required: true
+          %label{:for => "user_password"} 
+            Password (8 characters minimum)
+        .input-field.col.s6
+          %i.material-icons.prefix vpn_key
+          = f.password_field :password_confirmation, autocomplete: "off", required: true
+          %label{:for => "user_password_confirmation"} Password confirmation 
+      .row
+        .input-field.col.s12
+          %i.material-icons.prefix phone
+          = f.text_field :mobile, required: true
+          %label{:for => "user_mobile"} Mobile Number
+      .row
+        .col.s8.offset-s2
+          = f.submit "Sign up", class: 'btn'
