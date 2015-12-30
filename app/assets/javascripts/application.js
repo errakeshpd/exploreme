@@ -13,6 +13,7 @@
 //= require jquery
 //= require pace.js
 //= require materialize.js
+//= require d3
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
