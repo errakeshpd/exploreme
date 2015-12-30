@@ -2,13 +2,16 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Exploreme
+    %title Profile management
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    %link{:href => "http://fonts.googleapis.com/icon?family=Material+Icons", :rel => "stylesheet"}/
     = csrf_meta_tags
   %body{class: "#{controller.controller_name} #{controller.action_name}"}
-  	.row
-  	  .col.s12.m4.l3
-  	    Navigation
-  	  .col.s12.m8.l9
-    		= yield
+    = render partial: "profile/management/top_nav"
+    .main.clearfix
+      .row
+        = render partial: "profile/management/left_nav"
+      .page
+        = yield
+

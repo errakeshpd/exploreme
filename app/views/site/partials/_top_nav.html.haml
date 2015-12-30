@@ -15,7 +15,7 @@
             view_module
       - if user_signed_in?
         %li
-          %a.tooltipped{"data-delay" => "50", "data-position" => "bottom", "data-tooltip" => "#{current_user.full_name?}", :href => "/users/edit"}
+          %a.tooltipped{"data-delay" => "50", "data-position" => "bottom", "data-tooltip" => "#{current_user.full_name?}", :href => "/profile"}
             %i.material-icons
               perm_identity
         %li

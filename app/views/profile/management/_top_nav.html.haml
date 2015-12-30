@@ -1,0 +1,29 @@
+%nav.light-blue.darken-4
+  .nav-wrapper
+    %a.brand-logo{:href => "#"}
+    = image_tag("explore_logo.png", height: '100%', width: 'auto')
+    %a.button-collapse{"data-activates" => "mobile-demo", :href => "#"}
+      %i.material-icons menu
+    %ul.right.hide-on-med-and-down
+      %li
+        %a.tooltipped{"data-delay" => "50", "data-position" => "bottom", "data-tooltip" => "Home", :href => "/"}
+          %i.material-icons
+            home
+      %li
+        %a.tooltipped{"data-delay" => "50", "data-position" => "bottom", "data-tooltip" => "View My Profile", :href => "#"}
+          %i.material-icons
+            view_module
+      %li
+        = link_to 'Logout', destroy_user_session_path, :method => :delete
+
+    %ul#mobile-demo.side-nav
+      %li
+        %a.tooltipped{"data-delay" => "50", "data-position" => "bottom", "data-tooltip" => "Home", :href => "/"}
+          %i.material-icons
+            home
+      %li
+        %a.tooltipped{"data-delay" => "50", "data-position" => "bottom", "data-tooltip" => "View My Profile", :href => "#"}
+          %i.material-icons
+            view_module
+      %li
+        = link_to 'Logout', destroy_user_session_path, :method => :delete
