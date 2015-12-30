@@ -13,10 +13,15 @@
         %a.tooltipped{"data-delay" => "50", "data-position" => "bottom", "data-tooltip" => "Features", :href => "/features"}
           %i.material-icons
             view_module
-      %li
-        - if user_signed_in?
+      - if user_signed_in?
+        %li
+          %a.tooltipped{"data-delay" => "50", "data-position" => "bottom", "data-tooltip" => "#{current_user.full_name?}", :href => "/users/edit"}
+            %i.material-icons
+              perm_identity
+        %li
           = link_to 'Logout', destroy_user_session_path, :method => :delete
-        - else
+      - else
+        %li
           = link_to 'Log In', new_user_session_path
       %li
         - unless user_signed_in?
