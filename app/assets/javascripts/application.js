@@ -14,6 +14,8 @@
 //= require pace.js
 //= require materialize.js
 //= require d3
+//= require jquery.lettering.js
+//= require jquery.textillate.js
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
@@ -21,6 +23,15 @@
 $(function(){
   $(".button-collapse").sideNav();
   $('.tooltipped').tooltip({delay: 50});
+  $('.animate_text_notify').textillate({
+	loop: true,
+	in: {
+	effect: 'swing	'
+	},
+	out: {
+	effect: 'swing'
+	}
+  });
 })
 
         

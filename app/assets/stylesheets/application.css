@@ -12,6 +12,13 @@
  *
  *= require materialize.css
  *= require pace_style.css
+ *= require animate.css
  *= require_tree .
  *= require_self
  */
+.full_width{
+	width: 100%;
+}
+.20padding{
+	padding: 2% 10% 2% 10%;
+}
