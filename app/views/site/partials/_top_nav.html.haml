@@ -1,4 +1,4 @@
-%nav
+%nav.light-blue.darken-4
   .nav-wrapper
     %a.brand-logo{:href => "#"} Logo
     %a.button-collapse{"data-activates" => "mobile-demo", :href => "#"}
@@ -9,7 +9,9 @@
           %i.material-icons
             home
       %li
-        %a{:href => "#"} Features
+        %a.tooltipped{"data-delay" => "50", "data-position" => "bottom", "data-tooltip" => "Features", :href => "#"}
+          %i.material-icons
+            view_module
       %li
         %a{:href => "#"} Sign In
       %li
@@ -18,9 +20,11 @@
       %li
         %a.tooltipped{"data-delay" => "50", "data-position" => "right", "data-tooltip" => "Home", :href => "#"}
           %i.material-icons
-            view_module
+            home
       %li
-        %a{:href => "#"} Features
+        %a.tooltipped{"data-delay" => "50", "data-position" => "right", "data-tooltip" => "Features", :href => "#"}
+          %i.material-icons
+            view_module
       %li
         %a{:href => "#"} Sign In
       %li
