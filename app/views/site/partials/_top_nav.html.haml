@@ -13,9 +13,14 @@
           %i.material-icons
             view_module
       %li
-        %a{:href => "#"} Sign In
+        - if user_signed_in?
+          = link_to 'Logout', destroy_user_session_path, :method => :delete
+        - else
+          = link_to 'Log In', new_user_session_path
       %li
-        %a{:href => "#"} Sign up
+        - unless user_signed_in?
+          = link_to 'Register', new_user_registration_path
+
     %ul#mobile-demo.side-nav
       %li
         %a.tooltipped{"data-delay" => "50", "data-position" => "right", "data-tooltip" => "Home", :href => "#"}
