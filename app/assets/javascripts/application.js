@@ -17,6 +17,12 @@
 //= require turbolinks
 //= require_tree .
 
+$(function(){
+  $(".button-collapse").sideNav();
+  $('.tooltipped').tooltip({delay: 50});
+})
+
+        
 window.paceOptions = {
   // Disable the 'elements' source
   elements: false,
