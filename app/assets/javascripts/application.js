@@ -32,6 +32,7 @@ $(function(){
 	effect: 'swing'
 	}
   });
+  $('.parallax').parallax();
 })
 
         
