@@ -5,8 +5,7 @@
       %b
         = @user.full_name?
   %li
-    %a{:href => "#"} 
-      Account
+    = link_to 'Account', edit_user_registration_path
   %li
     %a{:href => "#"} 
       About me
